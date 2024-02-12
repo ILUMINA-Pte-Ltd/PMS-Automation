@@ -8,4 +8,4 @@ cypress.config.js
 .env.*
 
 #report
-/results
+cypress/results
