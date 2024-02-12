@@ -1,0 +1,11 @@
+#dependencies
+/node_modules
+
+cypress.config.js
+
+.DS_Store
+.env
+.env.*
+
+#report
+/results
