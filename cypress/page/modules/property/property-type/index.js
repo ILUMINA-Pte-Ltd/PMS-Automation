@@ -1,5 +1,6 @@
 import 'cypress-file-upload';
 
+
 export default class PropertyPage {
 
     clickPropertyMenu = () => {
@@ -11,12 +12,14 @@ export default class PropertyPage {
 
     selectTypeHouse = () => cy.get('.CreatePropertyPopup_contentContainer__N61_k > :nth-child(1)').click();
 
+    selectCondominium = () => cy.get('.CreatePropertyPopup_contentContainer__N61_k > :nth-child(2)').click();
+
     clickConfirmButton = () => cy.get('.PrimaryButtonVariant_container__BQBmm > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
 
     inputPropertyName = (propertyName) => cy.get(':nth-child(1) > :nth-child(2) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(propertyName);
 
     clickCollection = () => cy.get(':nth-child(1) > :nth-child(3) > :nth-child(3) > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').click();
-
+    
     selectCollection = () => cy.contains('Cabin').click();
 
     inputEmailAddress = (email) => cy.get(':nth-child(5) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(email);
