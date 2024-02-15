@@ -11,9 +11,18 @@ export default class RoomTypePage {
 
     clickRoomTypeTab = () => cy.get('.Tabs_tabsItemDefault__ttV1y').click();
 
-
     clickAddRoomTypeButton = () => 
         cy.get('.RoomTypeListPage_emptyStateButtonContainer__kjdZV > .Button_button__okmsK > .Button_contentContainer__fXqQa').click();
+
+    clicCreateRegularRoom = () => {
+        cy.wait(2000);
+        cy.get(':nth-child(1) > .RoomTypeListPage_emptyStateButtonContainer__kjdZV > .Button_button__okmsK').click();
+    } 
+
+    clickCreateConnectingRoom = () => {
+        cy.wait(2000);
+        cy.get(':nth-child(2) > .RoomTypeListPage_emptyStateButtonContainer__kjdZV > .Button_button__okmsK').click();
+    }
 
     inputRoomTypeName = (roomtypeName) => 
         cy.get(':nth-child(1) > :nth-child(3) > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(roomtypeName);
@@ -30,6 +39,79 @@ export default class RoomTypePage {
     inputTotalIndoor = (totalIndoor) =>
         cy.get(':nth-child(3) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(totalIndoor);
 
+    //Regular room
+    addFirstRoom = () => 
+        cy.get('.Table_tableTrailingButtonStyle__iAdkG > .Button_button__okmsK > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
+
+    inputFirstRoomName = () =>
+        cy.get('.RegularRoomTable_tableBody__x_Cns > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type("Room 1");
+        
+    addSecondRoom = () => 
+        cy.get('.Table_tableTrailingButtonStyle__iAdkG > .Button_button__okmsK > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
+
+    inputSecondRoomName = () =>
+        cy.get(':nth-child(2) > :nth-child(2) > .RegularRoomTable_tableBody__x_Cns > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type('Room 2');
+        
+    addThirdRoom = () =>
+        cy.get('.Table_tableTrailingButtonStyle__iAdkG > .Button_button__okmsK > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
+    
+    inputThirdRoomName = () =>
+        cy.get(':nth-child(3) > :nth-child(2) > .RegularRoomTable_tableBody__x_Cns > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type('Room 3');
+    
+    //Connecting room
+    clickRoomType1 = () =>
+        cy.get(':nth-child(1) > :nth-child(1) > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').click();
+
+    selectRoomType1 = () => {
+        cy.get('.Dropdown_dropdownItemTitle__VXjPY').click();
+        cy.wait(3000);
+    }
+
+    clickRoomType2 = () =>
+        cy.get(':nth-child(2) > :nth-child(1) > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').click();
+
+    selectRoomType2 = () => {
+        cy.get('.Dropdown_dropdownItemTitle__VXjPY').click();
+        cy.wait(3000);
+
+    }
+
+    clickAddConnectingRoom = () => {
+        cy.get('.Table_tableTrailingButtonStyle__iAdkG > .Button_button__okmsK > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
+        cy.wait(6000);
+    }
+
+    firstConnectingRoomName = (connectingRoomName) => {
+        cy.get('.ConnectingRoomTable_connectingRoomTableContent__BOPzh > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(connectingRoomName)
+        cy.wait(2000);
+    }
+
+    clickRoom2FirstConnecting = () => {
+        cy.get(':nth-child(4) > .ConnectingRoomTable_connectingRoomTableContent__BOPzh > :nth-child(1) > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').click();
+        cy.wait(3000);
+    }
+
+    selectRoom2FirstConnecting = () => {
+        cy.get(':nth-child(2) > .Dropdown_dropdownItemContainer__sz2xI > .Dropdown_dropdownItemTitle__VXjPY').click();
+        cy.wait(2000);
+    }
+       
+    secondConnectingRoomName = (connectingRoomName) =>  {
+        cy.get(':nth-child(2) > :nth-child(2) > .ConnectingRoomTable_connectingRoomTableContent__BOPzh > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(connectingRoomName);
+        cy.wait(2000);
+    }
+       
+    clickRoom2SecondConnecting = () => {
+        cy.get(':nth-child(2) > :nth-child(4) > .ConnectingRoomTable_connectingRoomTableContent__BOPzh > :nth-child(1) > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').click();
+        cy.wait(3000);
+    }
+        
+    selectRoom2SecondConnecting = () => {
+        cy.get(':nth-child(3) > .Dropdown_dropdownItemContainer__sz2xI > .Dropdown_dropdownItemTitle__VXjPY').click();
+        cy.wait(2000);
+    }
+    //Connecting End
+    
     addBedroom = () => 
         cy.get(':nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_inputTrailingView__c_q1V > .StepInput_buttonStep__bEbd3').click();
 
