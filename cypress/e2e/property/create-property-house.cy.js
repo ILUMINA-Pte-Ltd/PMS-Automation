@@ -1,5 +1,6 @@
 import { LoginToPMS } from "../../utils/helpers/login";
 import { PageObjects } from "../../page";
+import { TOAST_MESSAGE } from "../../utils/constants";
 import { faker } from '@faker-js/faker';
 
 const recentDate = faker.date.recent();
@@ -40,7 +41,7 @@ describe('Create property', () => {
 
         PageObjects.Property.clickCollection();
 
-        PageObjects.Property.selectCollection();
+        PageObjects.Property.selectCollection('Cabin');
 
         PageObjects.Property.inputEmailAddress(emailAddress);
 
@@ -48,7 +49,7 @@ describe('Create property', () => {
 
         PageObjects.Property.clickRegion();
 
-        PageObjects.Property.selectRegion();
+        PageObjects.Property.selectRegion('Bali');
 
         PageObjects.Property.inputLocalTax('10');
 
@@ -83,7 +84,7 @@ describe('Create property', () => {
 
         PageObjects.Property.clickPropertyMenu();
 
-        PageObjects.RoomType.clickContinueToEdit();
+        PageObjects.Property.clickContinueToEdit();
 
         PageObjects.RoomType.clickRoomTypeTab();
 
@@ -120,6 +121,47 @@ describe('Create property', () => {
         PageObjects.RoomType.createRoomTypeConfirm();
 
         PageObjects.RoomType.clickFinishSetup();
+    });
 
-    })
+    it("Edit property House", () => {
+
+        PageObjects.SideBar.clickSideBar();
+
+        PageObjects.Property.clickPropertyMenu();
+
+        PageObjects.Property.searchPropertyName('House Property');
+
+        PageObjects.Property.clickSeeDetails();
+
+        PageObjects.Property.clickEditProperty();
+
+        PageObjects.Property.inputPropertyName(' Edited');
+
+        PageObjects.Property.clickCollection();
+
+        PageObjects.Property.selectCollection('Luxury');
+
+        PageObjects.Property.clickSaveChanges()
+
+    });
+
+    it("Delete property House", () => {
+
+        PageObjects.SideBar.clickSideBar();
+
+        PageObjects.Property.clickPropertyMenu();
+
+        PageObjects.Property.searchPropertyName('House Property');
+
+        PageObjects.Property.clickSeeDetails();
+
+        PageObjects.Property.clickDeleteProperty();
+
+        PageObjects.Property.typeDelete();
+
+        PageObjects.Property.deleteConfirm();
+
+        cy.contains(TOAST_MESSAGE.DELETE_PROPERTY)
+
+    });
 })

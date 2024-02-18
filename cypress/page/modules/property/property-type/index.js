@@ -8,6 +8,28 @@ export default class PropertyPage {
         cy.contains('Property').click();
     }
 
+    searchPropertyName = (propertyName) => {
+        cy.get('.NavigationBar_desktopContainer__3_lYz > :nth-child(1) > .SearchInput_container__HP9cM > .SearchInput_searchTextInput__vx1nz > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(propertyName);
+        cy.wait(3000);
+    } 
+
+    clickContinueToEdit = () => {
+        cy.wait(3000)
+        cy.get(':nth-child(1) > :nth-child(6) > .text-center > .Button_button__okmsK').click()
+    }
+    
+    clickSeeDetails = () => {
+        cy.get(':nth-child(1) > :nth-child(6) > .text-center > .Button_button__okmsK').click()
+        cy.wait(3000);
+
+    }
+
+    clickDeleteProperty = () => cy.get('.LightSecondaryButtonVariant_container__8HLES > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
+
+    typeDelete = () => cy.get('.ConfirmationPopup_textConfirmationInput___Mc_A > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type('DELETE');
+
+    deleteConfirm = () => cy.get('.DestructiveButtonVariant_container__PB_oG > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
+
     clickCreateNewProperty = () => cy.get('.NavigationBar_actionsContainer__VT5tD > .Button_button__okmsK').click();
 
     selectTypeHouse = () => cy.get('.CreatePropertyPopup_contentContainer__N61_k > :nth-child(1)').click();
@@ -20,7 +42,7 @@ export default class PropertyPage {
 
     clickCollection = () => cy.get(':nth-child(1) > :nth-child(3) > :nth-child(3) > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').click();
     
-    selectCollection = () => cy.contains('Cabin').click();
+    selectCollection = (collection) => cy.contains(collection).click();
 
     inputEmailAddress = (email) => cy.get(':nth-child(5) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(email);
 
@@ -28,7 +50,7 @@ export default class PropertyPage {
 
     clickRegion = () => cy.get(':nth-child(7) > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').click();
 
-    selectRegion = () => cy.contains('Bali').click();
+    selectRegion = (region) => cy.contains(region).click();
 
     inputLocalTax = (localTax) => cy.get(':nth-child(8) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(localTax);
 
@@ -97,4 +119,10 @@ export default class PropertyPage {
 
     clickContinueToRoomTypes = () => cy.get('.PropertyForm_roomTypeButtonLayout__7OE5i > .Button_button__okmsK > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
 
+    clickEditProperty = () => {
+        cy.get('.LightPrimaryButtonVariant_container__UR5gI > .Button_contentContainer__fXqQa').click();
+        cy.wait(3000);
+    } 
+
+    clickSaveChanges = () => cy.get('.NavigationBar_actionsContainer__VT5tD > .Button_button__okmsK').click();
 }

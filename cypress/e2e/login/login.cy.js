@@ -6,16 +6,16 @@ import { TOAST_MESSAGE } from "../../utils/constants";
 describe('Login to PMS Dashboard', () => {
 
   beforeEach(() => {
-    cy.visit(Cypress.env('staging_url'));
+    cy.visit(Cypress.env('dev_url'));
     cy.wait(2000); 
 
 });
 
   it('Should be able to login PMS using valid email address', () => {
 
-    PageObjects.Login.inputEmailLogin(Cypress.env('staging_email'));
+    PageObjects.Login.inputEmailLogin(Cypress.env('valid_email'));
 
-    PageObjects.Login.inputPassword(Cypress.env('staging_password'));
+    PageObjects.Login.inputPassword(Cypress.env('password'))
 
     PageObjects.Login.clickLogin();
 
