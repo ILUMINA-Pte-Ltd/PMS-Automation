@@ -2,13 +2,6 @@ import 'cypress-file-upload';
 
 export default class RoomTypePage {
 
-    clickSeeDetailsButton = () => cy.contains('See Details').click();
-
-    clickContinueToEdit = () => {
-        cy.wait(3000)
-        cy.get(':nth-child(1) > :nth-child(6) > .text-center > .Button_button__okmsK').click()
-    }
-
     clickRoomTypeTab = () => cy.get('.Tabs_tabsItemDefault__ttV1y').click();
 
     clickAddRoomTypeButton = () => 
@@ -37,7 +30,7 @@ export default class RoomTypePage {
         cy.get('.RoomTypeDetails_gridContainer3__jI2XZ > :nth-child(2) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(maxGuest);
 
     inputTotalIndoor = (totalIndoor) =>
-        cy.get(':nth-child(3) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(totalIndoor);
+        cy.get('.RoomTypeDetails_gridContainer2__D6geT > :nth-child(2) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(totalIndoor);
 
     //Regular room
     addFirstRoom = () => 
