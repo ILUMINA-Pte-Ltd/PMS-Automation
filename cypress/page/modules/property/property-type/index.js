@@ -30,7 +30,7 @@ export default class PropertyPage {
 
     deleteConfirm = () => cy.get('.DestructiveButtonVariant_container__PB_oG > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
 
-    clickCreateNewProperty = () => cy.get('.NavigationBar_actionsContainer__VT5tD > .Button_button__okmsK').click();
+    clickCreateNewProperty = () =>  cy.get('.NavigationBar_actionsContainer__VT5tD > .Button_button__okmsK > .Button_contentContainer__fXqQa').first().click();
 
     selectTypeHouse = () => cy.get('.CreatePropertyPopup_contentContainer__N61_k > :nth-child(1)').click();
 
