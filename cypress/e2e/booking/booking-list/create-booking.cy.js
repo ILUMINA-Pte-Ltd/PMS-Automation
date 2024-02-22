@@ -3,20 +3,11 @@ import { PageObjects } from "../../../page";
 // import { TOAST_MESSAGE } from "../../utils/constants";
 import { faker } from '@faker-js/faker';
 
-const recentDate = faker.date.recent();
-const formattedDateTime = recentDate.toISOString().slice(0, 19).replace('T', ' ');
-const propertyName = `Condominium Property ${formattedDateTime} - Automation`;
 const emailAddress = faker.internet.email({firstName: 'Karina'});
-const phoneNumber = faker.string.numeric({length: { min: 5, max: 10 }});
+const firstName = faker.person.firstName()
+const lastName = faker.person.lastName()
+const phoneNumber = faker.string.numeric(8)
 const address = faker.location.city()
-const coordinates = faker.location.nearbyGPSCoordinate();
-
-const regularRoom = `Regular room ${formattedDateTime} - Automation`;
-const connectingRoom = `Regular room ${formattedDateTime} - Automation`;
-const roomDescription = faker.word.words(20);
-const standardGuest = 5;
-const maxGuest = 10;
-const totalIndoor = 18;
 
 describe('Create property', () => {
 
@@ -36,15 +27,15 @@ describe('Create property', () => {
 
         PageObjects.BookingList.clickCreateBookingButton();
 
-        PageObjects.BookingList.inputFirstName('Automation');
+        PageObjects.BookingList.inputFirstName(firstName);
 
-        PageObjects.BookingList.inputLastName('Kim');
+        PageObjects.BookingList.inputLastName(lastName);
 
         PageObjects.BookingList.inputEmail(emailAddress)
 
         PageObjects.BookingList.inputAddress(address);
 
-        PageObjects.BookingList.inputPhoneNumber('827318');
+        PageObjects.BookingList.inputPhoneNumber(phoneNumber);
 
         PageObjects.BookingList.clickCheckinDate();
 
