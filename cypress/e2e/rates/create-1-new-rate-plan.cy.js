@@ -95,7 +95,7 @@ describe('Create rates', () => {
 
         PageObjects.SideBar.clickSideBar();
 
-        //feby
+        //feby//
         PageObjects.RatesPlan.clickRatesMenu();
 
         PageObjects.RatesPlan.clickRatesPlan();
