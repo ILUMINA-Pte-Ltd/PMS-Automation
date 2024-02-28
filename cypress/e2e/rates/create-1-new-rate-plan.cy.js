@@ -92,9 +92,10 @@ describe('Create rates', () => {
     })
     it('Edit rate plan', () => {
 
-        
+
         PageObjects.SideBar.clickSideBar();
 
+        //feby
         PageObjects.RatesPlan.clickRatesMenu();
 
         PageObjects.RatesPlan.clickRatesPlan();
