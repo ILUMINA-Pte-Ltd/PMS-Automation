@@ -92,6 +92,7 @@ describe('Create rates', () => {
     })
     it('Edit rate plan', () => {
 
+        
         PageObjects.SideBar.clickSideBar();
 
         PageObjects.RatesPlan.clickRatesMenu();
