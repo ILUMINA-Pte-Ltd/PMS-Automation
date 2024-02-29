@@ -25,8 +25,6 @@ export default class RatesPlanPage {
     clearRateDescription = () => 
         cy.get('.TextArea_input__JT1OC').clear();
             
-    
-
     clickStartPeriode = () => cy.get(':nth-child(1) > .Datepicker_inputAnchor__Rz8G1 > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').click();
 
     clickMonth = () => cy.get('.Calendar_monthYearName___XSvs').click();
@@ -92,9 +90,10 @@ export default class RatesPlanPage {
     clickSaveasDraftButton = () => cy.get('.LightSecondaryButtonVariant_container__8HLES').click();
 
     // -------------------------// Edit Rates //-------------------//
-    clickThreeDotMenuEdit = () => cy.get('#table > table > tbody > tr:nth-child(2) > td:nth-child(6) > div > div > div.ThreeDotsMenu_icon__dagXf.RoomTypeRateTable_rateActionsMenu__EHifR > svg').click();
+    clickThreeDotMenuEdit = () => 
+    cy.get(':nth-child(2) > #table > .Table_table__bzm_K > .Table_tableBody__CPdUz > .Table_tableBodyRow__SimFr > :nth-child(6) > .RoomTypeRateTable_tableContentLast__mAC62 > .ThreeDotsMenu_iconMenuContainer__5uchg > .ThreeDotsMenu_icon__dagXf > svg > path').click();
     
-    clickContinueEdit = () => cy.get('.ThreeDotsMenu_menuContainer__Fvsnw > :nth-child(1) > .Button_button__okmsK > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
+    clickContinueEdit = () => cy.get('.ThreeDotsMenu_menuContainer__Fvsnw > :nth-child(1) > .Button_button__okmsK').click();
   
     clickSaveChanges = () => cy.get('.UpdateRateActions_container__WKdcG > .Button_button__okmsK').click();
     // -------------------------// Create Policies //-------------------//
@@ -130,8 +129,12 @@ export default class RatesPlanPage {
 
     // dismissZendesk = () => cy.get('[title="Close message"]').click();
 
-    clickThreeDotMenu = () => cy.get('#table > table > tbody > tr:nth-child(2) > td:nth-child(6) > div > div > div > svg').click().should('have.text', 'Studio Room');
-    clickThreeDotMenudelete  = () => cy.get(':nth-child(2) > #table > .Table_table__bzm_K > .Table_tableBody__CPdUz > :nth-child(2) > :nth-child(6) > .RoomTypeRateTable_tableContentLast__mAC62 > .ThreeDotsMenu_iconMenuContainer__5uchg > .ThreeDotsMenu_icon__dagXf > svg').click();
+    clickThreeDotMenu = () => 
+        cy.get('#table > table > tbody > tr > td:nth-child(6) > div > div > div.ThreeDotsMenu_icon__dagXf.RoomTypeRateTable_rateActionsMenu__EHifR > svg').click();
+    
+    clickThreeDotMenudelete  = () => 
+        cy.get(':nth-child(2) > #table > .Table_table__bzm_K > .Table_tableBody__CPdUz > .Table_tableBodyRow__SimFr > :nth-child(6) > .RoomTypeRateTable_tableContentLast__mAC62 > .ThreeDotsMenu_iconMenuContainer__5uchg > .ThreeDotsMenu_icon__dagXf > svg > path').click();
+        
 
     clickDeleteButton = () => cy.get('.RoomTypeRateTable_textRed__ENcy_ > .Button_button__okmsK > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
     
@@ -141,14 +144,9 @@ export default class RatesPlanPage {
 
     clickSaveRatetoInventory = () => cy.get(':nth-child(2) > .Button_button__okmsK').click();
 
+    clickAddFromInventory = () => cy.get(':nth-child(2) > #table > .Table_tableTrailingButtonStyle__iAdkG > .RoomTypeRateTable_buttonContainer__nsn39 > :nth-child(1)').click();
 
-
-    clickAddFromInventory = () => cy.get(':nth-child(3) > #table > .Table_tableTrailingButtonStyle__iAdkG > .RoomTypeRateTable_buttonContainer__nsn39 > :nth-child(1)').click();
-
-    InputSearch = (TestRate) => 
-        cy.get('.AddFromRateInventoryContainer_searchInput__hUk3X > .SearchInput_container__HP9cM > .SearchInput_searchTextInput__vx1nz > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(TestRate);
-
-    clickRadioButton = () => cy.get('.AddFromRateInventoryContainer_radioInventory__Kfbgl').click();
+    clickFirstRadioButton = () => cy.get(':nth-child(1) > :nth-child(1) > .AddFromRateInventoryContainer_tableContentRadio__qiZGs > .AddFromRateInventoryContainer_radioContainer__BBHYA > .AddFromRateInventoryContainer_radioInventory__Kfbgl').click();
 
     clickAddButton = () => cy.get('.PrimaryButtonVariant_container__BQBmm').click();
 

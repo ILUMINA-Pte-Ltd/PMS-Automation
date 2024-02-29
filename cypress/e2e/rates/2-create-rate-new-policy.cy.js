@@ -27,7 +27,7 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSeeDetails();
 
-        PageObjects.RatesPlan.clickThreeDotMenu();
+        PageObjects.RatesPlan.clickThreeDotMenuEdit();
             cy.wait(1000);
 
         PageObjects.RatesPlan.clickContinueEdit();
@@ -71,7 +71,7 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSeeDetails();
 
-        PageObjects.RatesPlan.clickThreeDotMenu();
+        PageObjects.RatesPlan.clickThreeDotMenuEdit();
             cy.wait(1000);
 
         PageObjects.RatesPlan.clickContinueEdit();

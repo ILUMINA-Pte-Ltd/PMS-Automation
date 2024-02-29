@@ -31,15 +31,12 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickAddFromInventory();
 
-        PageObjects.RatesPlan.InputSearch(TestRate);
+        PageObjects.RatesPlan.clickFirstRadioButton(TestRate);
             cy.wait(3000);
-        PageObjects.RatesPlan.clickRadioButton();
 
         PageObjects.RatesPlan.clickAddButton();
             cy.wait(2000);
 
-        
-        
     })
 
 })
