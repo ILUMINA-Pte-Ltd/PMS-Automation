@@ -27,7 +27,7 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSeeDetails();
 
-        PageObjects.RatesPlan.clickThreeDotMenu();
+        PageObjects.RatesPlan.clickThreeDotMenuEdit();
             cy.wait(1000);
 
         PageObjects.RatesPlan.clickContinueEdit();
@@ -82,7 +82,7 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSeeDetails();
 
-        PageObjects.RatesPlan.clickThreeDotMenu();
+        PageObjects.RatesPlan.clickThreeDotMenuEdit();
             cy.wait(1000);
 
         PageObjects.RatesPlan.clickContinueEdit();
@@ -102,30 +102,4 @@ describe('Create rates', () => {
 
     })
 
-    // it('Delete Rate Package', () => {
-
-    //     PageObjects.SideBar.clickSideBar();
-
-    //     PageObjects.RatesPlan.clickRatesMenu();
-
-    //     PageObjects.RatesPlan.clickRatesPlan();
-    //         cy.wait(2000);
-
-    //     PageObjects.RatesPlan.inputSearch(search);
-    //         cy.wait(3000);
-
-    //     PageObjects.RatesPlan.clickSeeDetails();
-
-    //     PageObjects.RatesPlan.clickThreeDotMenu();
-    //         cy.wait(1000);
-
-    //     PageObjects.RatesPlan.clickContinueEdit();
-    //         cy.wait(4000);
-    //         cy.scrollTo('bottom', { duration: 3000 });
-    //     PageObjects.RatesPackage.clickTrashLogo();
-
-    //     PageObjects.RatesPackage.clickDeleteButton();
-
-    //     PageObjects.RatesPackage.clickSaveasDraftButton();
-    // })
 })

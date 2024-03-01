@@ -2,7 +2,6 @@
 
 import { LoginToPMS } from "../../utils/helpers/login";
 import { PageObjects } from "../../page";
-import { faker } from '@faker-js/faker';
 
 const search = 'KALE';
 const fifty = 50;
@@ -27,7 +26,7 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSeeDetails();
 
-        PageObjects.RatesPlan.clickThreeDotMenu();
+        PageObjects.RatesPlan.clickThreeDotMenuEdit();
             cy.wait(1000);
 
         PageObjects.RatesPlan.clickContinueEdit();
@@ -53,9 +52,6 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSaveasDraftButton();
         
-        // PageObjects.RatesPlan.clickFinishSetupButton();
-        // cy.wait(3000);
-        
     })
     it('Edit new policy', () => {
 
@@ -71,7 +67,7 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSeeDetails();
 
-        PageObjects.RatesPlan.clickThreeDotMenu();
+        PageObjects.RatesPlan.clickThreeDotMenuEdit();
             cy.wait(1000);
 
         PageObjects.RatesPlan.clickContinueEdit();

@@ -13,8 +13,6 @@ const MontoFri = 120000;
 const SattoSun = 150000;
 const fee = 20000;
 const percentage = 100;
-const percentagefifthy = 50;
-const one = 1;
 
 
 
@@ -88,14 +86,12 @@ describe('Create rates', () => {
             cy.wait(3000);
         
         PageObjects.RatesPlan.clickSaveasDraftButton();
-            cy.wait(5000);  
+            cy.wait(3000);  
     })
     it('Edit rate plan', () => {
 
-
         PageObjects.SideBar.clickSideBar();
 
-        //feby//
         PageObjects.RatesPlan.clickRatesMenu();
 
         PageObjects.RatesPlan.clickRatesPlan();
@@ -106,11 +102,11 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSeeDetails();
 
-        PageObjects.RatesPlan.clickThreeDotMenu();
+        PageObjects.RatesPlan.clickThreeDotMenuEdit();
             cy.wait(1000);
 
         PageObjects.RatesPlan.clickContinueEdit();
-            cy.wait(4000);
+            cy.wait(3000);
 
         PageObjects.RatesPlan.clearRateDescription();
             cy.wait(1000);
@@ -122,5 +118,4 @@ describe('Create rates', () => {
 
     })
 
-    
 })

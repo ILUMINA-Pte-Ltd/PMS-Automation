@@ -7,7 +7,7 @@ import { faker } from '@faker-js/faker';
 const addonname = 'Add On 2';
 const search = 'Kale';
 const description = faker.word.words(25);
-const hundred = 100;
+const accomodation = 100;
 
 describe('Create rates', () => {
     beforeEach('Login to PMS', () => {
@@ -27,7 +27,7 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSeeDetails();
 
-        PageObjects.RatesPlan.clickThreeDotMenu();
+        PageObjects.RatesPlan.clickThreeDotMenuEdit();
             cy.wait(1000);
 
         PageObjects.RatesPlan.clickContinueEdit();
@@ -48,7 +48,7 @@ describe('Create rates', () => {
 
         PageObjects.RatesAddOn.clickChoosePercentage();
 
-        PageObjects.RatesAddOn.inputAddOnAmount(hundred);
+        PageObjects.RatesAddOn.inputAddOnAmount(accomodation);
 
         PageObjects.RatesAddOn.clickStartPeriode();
 
@@ -70,7 +70,6 @@ describe('Create rates', () => {
             cy.wait(3000);
         PageObjects.RatesPlan.clickSaveasDraftButton();
             cy.wait(3000);
-        // PageObjects.RatesAddOn.clickFinishSetup();
 
     })
 
@@ -88,7 +87,7 @@ describe('Create rates', () => {
 
         PageObjects.RatesPlan.clickSeeDetails();
 
-        PageObjects.RatesPlan.clickThreeDotMenu();
+        PageObjects.RatesPlan.clickThreeDotMenuEdit();
             cy.wait(1000);
 
         PageObjects.RatesPlan.clickContinueEdit();
@@ -101,39 +100,9 @@ describe('Create rates', () => {
 
         PageObjects.RatesAddOn.clickSaveButton();
 
-        // PageObjects.RatesPlan.clickSaveasDraftButton();
-
         PageObjects.RatesAddOn.clickFinishSetup();
 
 
 
     })
-
-    // it('Delete Rate Package', () => {
-
-    //     PageObjects.SideBar.clickSideBar();
-
-    //     PageObjects.RatesPlan.clickRatesMenu();
-
-    //     PageObjects.RatesPlan.clickRatesPlan();
-    //         cy.wait(2000);
-
-    //     PageObjects.RatesPlan.inputSearch(search);
-    //         cy.wait(3000);
-
-    //     PageObjects.RatesPlan.clickSeeDetails();
-
-    //     PageObjects.RatesPlan.clickThreeDotMenu();
-    //         cy.wait(1000);
-
-    //     PageObjects.RatesPlan.clickContinueEdit();
-    //         cy.wait(4000);
-    //         cy.scrollTo('bottom', { duration: 3000 });
-    //     PageObjects.RatesAddOn.clickDeleteButton();
-
-    //     PageObjects.RatesAddOn.clickDeleteButton();
-
-    //     PageObjects.RatesAddOn.clickSaveasDraftButton();
-
-    // })
 })
