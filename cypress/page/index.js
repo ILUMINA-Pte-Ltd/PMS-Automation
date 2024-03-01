@@ -4,6 +4,7 @@ import DateComponent from "./components/date.component"
 import PropertyPage from "./modules/property/property-type"
 import RoomTypePage from "./modules/property/room-type";
 import BookingListPage from "./modules/booking/booking-list";
+import FrontDeskPage from "./modules/frontdesk";
 import RatesPlanPage from "./modules/rates/rate-plan/rate-plan";
 import RatesPackagePage from "./modules/rates/rate-plan/rate-package";
 import RatesAddOnPage from "./modules/rates/rate-plan/add-on";
@@ -15,6 +16,7 @@ export const PageObjects = {
     Property: new PropertyPage(),
     RoomType: new RoomTypePage(),
     BookingList: new BookingListPage(),
+    FrontDesk: new FrontDeskPage(),
     RatesPlan: new RatesPlanPage(),
     RatesPackage: new RatesPackagePage(),
     RatesAddOn: new RatesAddOnPage(),
