@@ -24,8 +24,8 @@ export default class RatesAddOnPage {
     clickChoosePercentage = () => 
         cy.get(':nth-child(1) > .Dropdown_dropdownItemContainer__sz2xI > .Dropdown_dropdownItemTitle__VXjPY').click();
 
-    inputAddOnAmount = (hundred) =>
-        cy.get('.RateAddonsContainer_editForm__EzjKx > :nth-child(4) > :nth-child(3) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(hundred);
+    inputAddOnAmount = (accomodation) =>
+        cy.get('.RateAddonsContainer_editForm__EzjKx > :nth-child(4) > :nth-child(3) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(accomodation);
 
     clickStartPeriode = () => 
         cy.get(':nth-child(5) > :nth-child(1) > .Datepicker_inputAnchor__Rz8G1 > :nth-child(1) > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').click();

@@ -2,19 +2,8 @@
 
 import { LoginToPMS } from "../../utils/helpers/login";
 import { PageObjects } from "../../page";
-import { faker } from '@faker-js/faker';
 
-const recentDate = faker.date.recent();
-const formattedDateTime = recentDate.toISOString().slice(0, 19).replace('T', ' ');
-const description = faker.word.words(25);
 const search = 'KALE';
-const rateName = `Test Rate ${formattedDateTime} - Automation`;
-const MontoFri = 120000;
-const SattoSun = 150000;
-const fee = 20000;
-const percentage = 100;
-const percentagefifthy = 50;
-const one = 1;
 
 
 

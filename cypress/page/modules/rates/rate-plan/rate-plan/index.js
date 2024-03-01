@@ -1,7 +1,5 @@
 import 'cypress-file-upload';
 
-// const index = 0;
-
 export default class RatesPlanPage {
 
     clickRatesMenu = () => cy.get('[data-testid="Rates"]').click();
@@ -41,7 +39,6 @@ export default class RatesPlanPage {
 
     clickDirectPayment = () => cy.get(':nth-child(2) > .Dropdown_dropdownItemContainer__sz2xI > .Dropdown_dropdownItemTitle__VXjPY > input').click();
 
-  
     inputBaseRateMontoFri = (MontoFri) => {
     
         for(let index=2;index<=6;index++){
@@ -91,11 +88,12 @@ export default class RatesPlanPage {
 
     // -------------------------// Edit Rates //-------------------//
     clickThreeDotMenuEdit = () => 
-    cy.get(':nth-child(2) > #table > .Table_table__bzm_K > .Table_tableBody__CPdUz > .Table_tableBodyRow__SimFr > :nth-child(6) > .RoomTypeRateTable_tableContentLast__mAC62 > .ThreeDotsMenu_iconMenuContainer__5uchg > .ThreeDotsMenu_icon__dagXf > svg > path').click();
+        cy.get(':nth-child(2) > #table > .Table_table__bzm_K > .Table_tableBody__CPdUz > .Table_tableBodyRow__SimFr > :nth-child(6) > .RoomTypeRateTable_tableContentLast__mAC62 > .ThreeDotsMenu_iconMenuContainer__5uchg > .ThreeDotsMenu_icon__dagXf > svg > path').click();
     
     clickContinueEdit = () => cy.get('.ThreeDotsMenu_menuContainer__Fvsnw > :nth-child(1) > .Button_button__okmsK').click();
   
     clickSaveChanges = () => cy.get('.UpdateRateActions_container__WKdcG > .Button_button__okmsK').click();
+    
     // -------------------------// Create Policies //-------------------//
     clickEditPolicyButton = () => cy.get('.RatePolicyContainer_editModeContainer__NJT2j > .Button_button__okmsK').click();
 
@@ -127,15 +125,12 @@ export default class RatesPlanPage {
 
     // -------------------------// Delete Rate Plan //-------------------//
 
-    // dismissZendesk = () => cy.get('[title="Close message"]').click();
-
     clickThreeDotMenu = () => 
         cy.get('#table > table > tbody > tr > td:nth-child(6) > div > div > div.ThreeDotsMenu_icon__dagXf.RoomTypeRateTable_rateActionsMenu__EHifR > svg').click();
     
     clickThreeDotMenudelete  = () => 
         cy.get(':nth-child(2) > #table > .Table_table__bzm_K > .Table_tableBody__CPdUz > .Table_tableBodyRow__SimFr > :nth-child(6) > .RoomTypeRateTable_tableContentLast__mAC62 > .ThreeDotsMenu_iconMenuContainer__5uchg > .ThreeDotsMenu_icon__dagXf > svg > path').click();
         
-
     clickDeleteButton = () => cy.get('.RoomTypeRateTable_textRed__ENcy_ > .Button_button__okmsK > .Button_contentContainer__fXqQa > .Button_buttonText__vngL0').click();
     
     yesDelete = () => cy.get('.DestructiveButtonVariant_container__PB_oG').click();
@@ -150,4 +145,4 @@ export default class RatesPlanPage {
 
     clickAddButton = () => cy.get('.PrimaryButtonVariant_container__BQBmm').click();
 
-    }
+}

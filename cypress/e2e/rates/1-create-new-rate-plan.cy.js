@@ -13,8 +13,6 @@ const MontoFri = 120000;
 const SattoSun = 150000;
 const fee = 20000;
 const percentage = 100;
-const percentagefifthy = 50;
-const one = 1;
 
 
 

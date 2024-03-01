@@ -2,12 +2,8 @@
 
 import { LoginToPMS } from "../../utils/helpers/login";
 import { PageObjects } from "../../page";
-import { faker } from '@faker-js/faker';
 
-const addonname = 'Add On 2';
 const search = 'Kale';
-const description = faker.word.words(25);
-const hundred = 100;
 const TestRate = 'Test Rate';
 
 describe('Create rates', () => {

@@ -2,7 +2,6 @@
 
 import { LoginToPMS } from "../../utils/helpers/login";
 import { PageObjects } from "../../page";
-import { faker } from '@faker-js/faker';
 
 const search = 'KALE';
 const fifty = 50;
@@ -52,9 +51,6 @@ describe('Create rates', () => {
         PageObjects.RatesPlan.clickSavePolicyButton();
 
         PageObjects.RatesPlan.clickSaveasDraftButton();
-        
-        // PageObjects.RatesPlan.clickFinishSetupButton();
-        // cy.wait(3000);
         
     })
     it('Edit new policy', () => {

@@ -7,7 +7,7 @@ import BookingListPage from "./modules/booking/booking-list";
 import RatesPlanPage from "./modules/rates/rate-plan/rate-plan";
 import RatesPackagePage from "./modules/rates/rate-plan/rate-package";
 import RatesAddOnPage from "./modules/rates/rate-plan/add-on";
-// import HouseCleaningSchedulePage from "./modules/setting/house-cleaning-schedule"
+// import HouseCleaningSchedulePage from "./modules/setting/house-cleaning-schedule";
 
 export const PageObjects = {
     Login: new LoginPage(),
