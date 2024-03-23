@@ -26,25 +26,4 @@ export default class PaymentReport {
     clickToField = () =>
         cy.get('.SelectionDatePicker_datePickerContainer__R6BGp > :nth-child(2) > :nth-child(1) > .TextInput_inputContainer__UlFly').click();
 
-    
-
-    verifyCleaningSchedule = () => {
-        
-        cy.wait(1000);
-
-        cy.get('body').then($element => {
-
-            if ($element.find('.Table_tableBodyRow__SimFr > :nth-child(1)').length > 0) {
-                console.log("Only 1 cleaning schedule is shown");
-            } else {
-                cy.get('body').then($element => {
-                    if ($element.find('.Table_tableBody__CPdUz > :nth-child(1) > :nth-child(1)').length > 0) {
-                        console.log("More than 1 cleaning schedule are shown");
-                    } else {
-                        console.log("There are no scheduled")
-                    }
-                });
-            }
-        });
-    }
 }
