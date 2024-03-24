@@ -102,7 +102,5 @@ describe('Create rates', () => {
 
         PageObjects.RatesAddOn.clickFinishSetup();
 
-
-
     })
 })

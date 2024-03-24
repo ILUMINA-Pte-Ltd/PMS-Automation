@@ -8,6 +8,8 @@ export default class RatesPlanPage {
 
     inputSearch = (search) => 
         cy.get('.SearchInput_searchTextInput__vx1nz > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(search);
+    inputSearch = (searchByID) => 
+        cy.get('.SearchInput_searchTextInput__vx1nz > .TextInput_inputContainer__UlFly > .TextInput_input__kmkwE').type(searchByID);
 
     clickSeeDetails = () => cy.get(':nth-child(1) > :nth-child(6) > .RateListPage_tableContent__YxgMr > .Button_button__okmsK').click();
 

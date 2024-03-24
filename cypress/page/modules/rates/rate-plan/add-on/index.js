@@ -1,7 +1,5 @@
 import 'cypress-file-upload';
 
-// const index = 0;
-
 export default class RatesAddOnPage {
 
     clickButtonCreateAddOnRate = () => cy.get('.RateAddonsContainer_detailsCard__Xq1Wa > .Button_button__okmsK').click();
@@ -54,9 +52,5 @@ export default class RatesAddOnPage {
 
     clickDeleteButton = () =>
         cy.get('.RateAddonTable_iconTrash__H_BRp > path').click();
-
-
-
-
 
 }
