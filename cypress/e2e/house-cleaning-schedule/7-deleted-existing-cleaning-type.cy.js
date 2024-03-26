@@ -14,21 +14,21 @@ describe('Create rates', () => {
     
         PageObjects.SideBar.clickSideBar();
 
-        PageObjects.HouseCS.clickSettingsMenu();
+        PageObjects.HouseCleaningSchedule.clickSettingsMenu();
 
-        PageObjects.HouseCS.clickHousetCleaningSchedule();
+        PageObjects.HouseCleaningSchedule.clickHousetCleaningSchedule();
         cy.wait(3000);
 
         PageObjects.RatesPlan.inputSearch('kale');
         cy.wait(2000);
 
-        PageObjects.HouseCS.clickSeeDetails();
+        PageObjects.HouseCleaningSchedule.clickSeeDetails();
         
-        PageObjects.HouseCS.clickThreedot();
+        PageObjects.HouseCleaningSchedule.clickThreedot();
         
-        PageObjects.HouseCS.deletecyCleaningType();
+        PageObjects.HouseCleaningSchedule.deletecyCleaningType();
         
-        PageObjects.HouseCS.confirmationDelete();
+        PageObjects.HouseCleaningSchedule.confirmationDelete();
 
         
     })

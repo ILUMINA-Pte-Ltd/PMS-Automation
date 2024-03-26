@@ -14,12 +14,12 @@ describe('Create rates', () => {
 
         PageObjects.SideBar.clickSideBar();
 
-        PageObjects.HouseCS.clickSettingsMenu();
+        PageObjects.HouseCleaningSchedule.clickSettingsMenu();
 
-        PageObjects.HouseCS.clickHousetCleaningSchedule();
+        PageObjects.HouseCleaningSchedule.clickHousetCleaningSchedule();
         cy.wait(3000);
 
-        PageObjects.HouseCS.clickCleaingInventoryTab();
+        PageObjects.HouseCleaningSchedule.clickCleaingInventoryTab();
         cy.wait(1000);
 
         PageObjects.RatesPlan.inputSearch(search);

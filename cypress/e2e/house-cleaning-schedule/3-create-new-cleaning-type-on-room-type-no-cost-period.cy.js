@@ -17,61 +17,61 @@ describe('Create rates', () => {
     it( 'Create New Cleaning Type on a room type, no cost period', () => {
         PageObjects.SideBar.clickSideBar();
 
-        PageObjects.HouseCS.clickSettingsMenu();
+        PageObjects.HouseCleaningSchedule.clickSettingsMenu();
 
-        PageObjects.HouseCS.clickHousetCleaningSchedule();
+        PageObjects.HouseCleaningSchedule.clickHousetCleaningSchedule();
         cy.wait(3000);
 
         PageObjects.RatesPlan.inputSearch(search);
         cy.wait(1000);
 
-        PageObjects.HouseCS.clickSeeDetails();
+        PageObjects.HouseCleaningSchedule.clickSeeDetails();
 
-        PageObjects.HouseCS.clickCreateNewCleaningType();
+        PageObjects.HouseCleaningSchedule.clickCreateNewCleaningType();
 
-        PageObjects.HouseCS.inputCleaningType(cleaningType);
+        PageObjects.HouseCleaningSchedule.inputCleaningType(cleaningType);
 
-        PageObjects.HouseCS.clickFrequency();
+        PageObjects.HouseCleaningSchedule.clickFrequency();
 
-        PageObjects.HouseCS.inputDays(2);
+        PageObjects.HouseCleaningSchedule.inputDays(2);
 
         PageObjects.RatesPlan.inputRateDescription(description);
 
-        PageObjects.HouseCS.inputBaseCost(20000);
+        PageObjects.HouseCleaningSchedule.inputBaseCost(20000);
 
-        PageObjects.HouseCS.clickFinishSetup();
+        PageObjects.HouseCleaningSchedule.clickFinishSetup();
         cy.wait(5000);
     })
     it('Edit Existing Cleaning Type on a room type, no cost period',() => {
 
         PageObjects.SideBar.clickSideBar();
 
-        PageObjects.HouseCS.clickSettingsMenu();
+        PageObjects.HouseCleaningSchedule.clickSettingsMenu();
 
-        PageObjects.HouseCS.clickHousetCleaningSchedule();
+        PageObjects.HouseCleaningSchedule.clickHousetCleaningSchedule();
         cy.wait(3000);
 
         PageObjects.RatesPlan.inputSearch(search);
         cy.wait(1000);
 
-        PageObjects.HouseCS.clickSeeDetails();
+        PageObjects.HouseCleaningSchedule.clickSeeDetails();
 
-        PageObjects.HouseCS.clickThreedot();
+        PageObjects.HouseCleaningSchedule.clickThreedot();
 
-        PageObjects.HouseCS.clickEditButton();
+        PageObjects.HouseCleaningSchedule.clickEditButton();
 
-        PageObjects.HouseCS.clickFrequency();
+        PageObjects.HouseCleaningSchedule.clickFrequency();
         cy.wait(1000)
 
-        PageObjects.HouseCS.clickCheckBox();
+        PageObjects.HouseCleaningSchedule.clickCheckBox();
 
         PageObjects.RatesPlan.inputRateDescription(description);
 
-        PageObjects.HouseCS.clearBaseCost();
+        PageObjects.HouseCleaningSchedule.clearBaseCost();
 
-        PageObjects.HouseCS.inputBaseCost(30000);
+        PageObjects.HouseCleaningSchedule.inputBaseCost(30000);
 
-        PageObjects.HouseCS.clickFinishSetup();
+        PageObjects.HouseCleaningSchedule.clickFinishSetup();
 
     })
     

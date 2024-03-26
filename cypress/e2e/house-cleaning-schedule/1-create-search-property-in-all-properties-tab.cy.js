@@ -15,30 +15,30 @@ describe('Create rates', () => {
 
         PageObjects.SideBar.clickSideBar();
 
-        PageObjects.HouseCS.clickSettingsMenu();
+        PageObjects.HouseCleaningSchedule.clickSettingsMenu();
 
-        PageObjects.HouseCS.clickHousetCleaningSchedule();
+        PageObjects.HouseCleaningSchedule.clickHousetCleaningSchedule();
         cy.wait(3000);
 
         PageObjects.RatesPlan.inputSearch(search);
         cy.wait(1000);
 
-        PageObjects.HouseCS.clickSeeDetails();
+        PageObjects.HouseCleaningSchedule.clickSeeDetails();
 
     })
     it('Create Search Property in all properties tab by Property ID', () => {
         
         PageObjects.SideBar.clickSideBar();
 
-        PageObjects.HouseCS.clickSettingsMenu();
+        PageObjects.HouseCleaningSchedule.clickSettingsMenu();
 
-        PageObjects.HouseCS.clickHousetCleaningSchedule();
+        PageObjects.HouseCleaningSchedule.clickHousetCleaningSchedule();
         cy.wait(3000);
 
         PageObjects.RatesPlan.inputSearch(searchByID);
         cy.wait(1000);
 
-        PageObjects.HouseCS.clickSeeDetails();
+        PageObjects.HouseCleaningSchedule.clickSeeDetails();
     })
 
 })
