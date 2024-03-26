@@ -11,24 +11,24 @@ it ('add  cleaning type from inventory', () => {
 
     PageObjects.SideBar.clickSideBar();
 
-    PageObjects.HouseCS.clickSettingsMenu();
+    PageObjects.HouseCleaningSchedule.clickSettingsMenu();
 
-    PageObjects.HouseCS.clickHousetCleaningSchedule();
+    PageObjects.HouseCleaningSchedule.clickHousetCleaningSchedule();
     cy.wait(3000);
 
     PageObjects.RatesPlan.inputSearch('kale');
     cy.wait(1000);
 
-    PageObjects.HouseCS.clickSeeDetails();
+    PageObjects.HouseCleaningSchedule.clickSeeDetails();
 
-    PageObjects.HouseCS.clickAddfromInventory();
+    PageObjects.HouseCleaningSchedule.clickAddfromInventory();
     
-    PageObjects.HouseCS.inputSearch('automate');
+    PageObjects.HouseCleaningSchedule.inputSearch('automate');
     cy.wait(3000);
     
-    PageObjects.HouseCS.clickCheckbox();
+    PageObjects.HouseCleaningSchedule.clickCheckbox();
     
-    PageObjects.HouseCS.clickAdd();
+    PageObjects.HouseCleaningSchedule.clickAdd();
     cy.wait(5000);
 
     }) 
