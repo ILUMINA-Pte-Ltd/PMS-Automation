@@ -5,4 +5,6 @@ export const TOAST_MESSAGE = {
     ARRIVAL_STATUS: "Arrival status successfully changed",
     CLEANING_STATUS: "Cleaning status successfully changed",
     FRONTDESK_EMPTY: "There are no scheduled arrival for today",
+    LINK_BOOKING: "Booking successfully linked",
+    UNLINK_BOOKING: "Booking has been unlinked"
   };

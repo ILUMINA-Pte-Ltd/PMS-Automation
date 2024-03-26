@@ -10,6 +10,7 @@ import RatesAddOnPage from "./modules/rates/rate-plan/add-on";
 import HouseCleaningSchedulePage from "./modules/setting/house-cleaning-schedule";
 import BookingListHeader from "./modules/booking/booking-list/booking-list-header";
 import CreateBookingPopup from "./modules/booking/booking-list/create-booking-popup";
+import LinkBookingPopup from "./modules/booking/booking-list/link-booking";
 
 export const PageObjects = {
     Login: new LoginPage(),
@@ -24,4 +25,5 @@ export const PageObjects = {
     HouseCleaningSchedule: new HouseCleaningSchedulePage(),
     BookingListHeader : new BookingListHeader(),
     CreateBookingPopup : new CreateBookingPopup(),
+    LinkBookingPopup : new LinkBookingPopup()
 }
